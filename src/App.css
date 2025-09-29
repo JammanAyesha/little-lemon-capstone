@@ -306,3 +306,59 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+/* ===== BOOKING FORM ===== */
+.BookingForm {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: #fffbe6; /* soft cream, consistent with site */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.BookingForm label {
+  font-weight: bold;
+  color: #333;
+}
+
+.BookingForm input,
+.BookingForm select {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.BookingForm input:focus,
+.BookingForm select:focus {
+  border-color: #f9d923; /* golden yellow focus */
+  box-shadow: 0 0 5px rgba(249, 217, 35, 0.5);
+  outline: none;
+}
+
+.BookingForm input[type="submit"] {
+  background-color: #f9d923; /* golden yellow */
+  color: #333;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.BookingForm input[type="submit"]:hover {
+  background-color: #e6c300; /* slightly darker gold */
+  transform: scale(1.05);
+}
+
+/* BookingPage layout */
+.BookingPage {
+  padding: 2rem;
+  text-align: center;
+}
