@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #fffbe6;
+  background-color: #fafafa; /* soft background */
   color: #333;
   line-height: 1.6;
 }
@@ -18,7 +18,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #f9d923;
+  background-color: #fff; /* clean white */
+  border-bottom: 3px solid #f4ce14; /* brand yellow accent */
 }
 
 header img {
@@ -27,13 +28,13 @@ header img {
 
 header h1 {
   font-size: 2rem;
-  color: #333;
+  color: #495e57; /* dark green */
 }
 
 /* ===== NAVIGATION ===== */
 nav {
-  background-color: #fffae5;
-  padding: 0.5rem 2rem;
+  background-color: #495e57; /* dark green bar */
+  padding: 0.75rem 2rem;
 }
 
 nav ul {
@@ -41,17 +42,18 @@ nav ul {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* white text */
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #f9d923;
+  color: #f4ce14; /* yellow hover */
 }
 
 /* ===== HOME PAGE COMPONENTS ===== */
@@ -60,33 +62,38 @@ nav ul li a:hover {
 .CallToAction {
   text-align: center;
   padding: 3rem 1rem;
-  background-color: #fff5b1;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f4ce14, #ffe98a); /* gradient yellow */
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
 }
 
 .CallToAction h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #495e57; /* dark green */
 }
 
 .CallToAction p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  color: #333;
 }
 
 .CallToAction button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background-color: #f9d923;
+  background-color: #495e57; /* dark green */
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .CallToAction button:hover {
-  background-color: #e6c300;
+  background-color: #3b4a43;
+  transform: translateY(-2px);
 }
 
 /* Specials Section */
@@ -94,8 +101,9 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin: 3rem auto;
+  max-width: 1100px;
 }
 
 .Specials h2 {
@@ -103,19 +111,25 @@ nav ul li a:hover {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #495e57;
 }
 
 .Specials .dish-card {
-  background-color: #fff5b1;
+  background-color: #fff;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  flex: 1 1 calc(33% - 2rem);
+  flex: 1 1 calc(30% - 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.Specials .dish-card:hover {
+  transform: scale(1.05);
 }
 
 .Specials .dish-card img {
@@ -130,36 +144,44 @@ nav ul li a:hover {
 
 /* CustomersSay Section */
 .CustomersSay {
-  background-color: #fff8d1;
+  background-color: #f9f9f9;
   padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 900px;
 }
 
 .CustomersSay h2 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 2rem;
+  color: #495e57;
 }
 
 .CustomersSay .testimonial {
-  background-color: #fff5b1;
+  background-color: #fff;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  font-style: italic;
 }
 
 /* Chicago Section */
 .Chicago {
   padding: 2rem 0;
   text-align: center;
+  background-color: #eef6f3;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1000px;
 }
 
 .Chicago h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #495e57;
 }
 
 .Chicago p {
@@ -169,33 +191,38 @@ nav ul li a:hover {
 }
 
 .Chicago img {
-  width: 300px;
+  width: 280px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
   margin: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* BookingPage */
 .BookingPage {
   padding: 2rem;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
   text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .BookingPage h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #495e57;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: #f9d923;
+  background-color: #495e57;
   padding: 2rem;
   text-align: center;
-  margin-top: 2rem;
-  border-top: 2px solid #e6c300;
+  margin-top: 3rem;
+  color: #fff;
 }
 
 .footer-logo img {
@@ -215,23 +242,23 @@ footer {
 .footer-nav li a {
   text-decoration: none;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   transition: color 0.3s;
 }
 
 .footer-nav li a:hover {
-  color: #fff;
+  color: #f4ce14;
 }
 
 .social-links a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: bold;
 }
 
 .social-links a:hover {
-  color: #fff;
+  color: #f4ce14;
 }
 
 /* ===== RESPONSIVE ===== */
