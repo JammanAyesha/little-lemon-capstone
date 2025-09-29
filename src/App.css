@@ -1,10 +1,8 @@
-/* App.css */
-
-/* Reset & base */
+/* ===== GLOBAL STYLES ===== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
 
@@ -14,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 header {
   display: flex;
   align-items: center;
@@ -25,7 +23,6 @@ header {
 
 header img {
   height: 60px;
-  width: auto;
 }
 
 header h1 {
@@ -33,7 +30,7 @@ header h1 {
   color: #333;
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
 nav {
   background-color: #fffae5;
   padding: 0.5rem 2rem;
@@ -57,13 +54,10 @@ nav ul li a:hover {
   color: #f9d923;
 }
 
-/* Main */
-main {
-  padding: 2rem;
-}
+/* ===== HOME PAGE COMPONENTS ===== */
 
-/* Hero Section */
-#hero {
+/* CallToAction / Hero */
+.CallToAction {
   text-align: center;
   padding: 3rem 1rem;
   background-color: #fff5b1;
@@ -71,17 +65,17 @@ main {
   margin-bottom: 2rem;
 }
 
-#hero h2 {
+.CallToAction h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-#hero p {
+.CallToAction p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
-#hero button {
+.CallToAction button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #f9d923;
@@ -91,26 +85,31 @@ main {
   transition: background-color 0.3s;
 }
 
-#hero button:hover {
+.CallToAction button:hover {
   background-color: #e6c300;
 }
 
-/* Highlights Section */
-#highlights {
-  margin: 2rem 0;
+/* Specials Section */
+.Specials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-#highlights h2 {
+.Specials h2 {
+  width: 100%;
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.dish-card {
+.Specials .dish-card {
   background-color: #fff5b1;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
-  margin: 1rem;
   flex: 1 1 calc(33% - 2rem);
   display: flex;
   flex-direction: column;
@@ -119,38 +118,31 @@ main {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.dish-card img {
+.Specials .dish-card img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-#highlights .dish-card p {
+.Specials .dish-card p {
   margin: 0.25rem 0;
 }
 
-/* Dish cards container (flex layout) */
-#highlights {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Testimonials Section */
-#testimonials {
+/* CustomersSay Section */
+.CustomersSay {
   background-color: #fff8d1;
   padding: 2rem;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
-#testimonials h2 {
+.CustomersSay h2 {
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.testimonial {
+.CustomersSay .testimonial {
   background-color: #fff5b1;
   padding: 1rem;
   margin: 0.5rem 0;
@@ -159,38 +151,45 @@ main {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* About Section */
-#about {
+/* Chicago Section */
+.Chicago {
   padding: 2rem 0;
-}
-
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
-#about p {
+.Chicago h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Chicago p {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 1.5rem;
 }
 
-.about-images {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.about-images img {
+.Chicago img {
   width: 300px;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
+  margin: 0.5rem;
 }
 
-/* Footer */
+/* BookingPage */
+.BookingPage {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.BookingPage h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
 footer {
   background-color: #f9d923;
   padding: 2rem;
@@ -235,9 +234,9 @@ footer {
   color: #fff;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .dish-card {
+  .Specials .dish-card {
     flex: 1 1 calc(45% - 2rem);
   }
 }
@@ -249,12 +248,16 @@ footer {
     gap: 0.5rem;
   }
 
-  .dish-card {
+  .Specials .dish-card {
     flex: 1 1 100%;
   }
 
-  .about-images img {
+  .Chicago img {
     width: 80%;
+  }
+
+  .CallToAction {
+    padding: 2rem 1rem;
   }
 }
 
@@ -263,15 +266,15 @@ footer {
     font-size: 1.5rem;
   }
 
-  #hero h2 {
+  .CallToAction h2 {
     font-size: 1.8rem;
   }
 
-  #hero p {
+  .CallToAction p {
     font-size: 1rem;
   }
 
-  #hero button {
+  .CallToAction button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
