@@ -1,38 +1,278 @@
-.App {
+/* App.css */
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fffbe6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #f9d923;
+}
+
+header img {
+  height: 60px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background-color: #fffae5;
+  padding: 0.5rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f9d923;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+}
+
+/* Hero Section */
+#hero {
   text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff5b1;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#hero button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f9d923;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#hero button:hover {
+  background-color: #e6c300;
+}
+
+/* Highlights Section */
+#highlights {
+  margin: 2rem 0;
+}
+
+#highlights h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dish-card {
+  background-color: #fff5b1;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 1rem;
+  flex: 1 1 calc(33% - 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dish-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#highlights .dish-card p {
+  margin: 0.25rem 0;
+}
+
+/* Dish cards container (flex layout) */
+#highlights {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Testimonials Section */
+#testimonials {
+  background-color: #fff8d1;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#testimonials h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial {
+  background-color: #fff5b1;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* About Section */
+#about {
+  padding: 2rem 0;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background-color: #f9d923;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 2px solid #e6c300;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.footer-nav li a:hover {
+  color: #fff;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dish-card {
+    flex: 1 1 calc(45% - 2rem);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dish-card {
+    flex: 1 1 100%;
+  }
+
+  .about-images img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #hero button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
